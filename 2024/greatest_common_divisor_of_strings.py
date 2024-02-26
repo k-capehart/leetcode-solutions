@@ -1,17 +1,19 @@
 class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:
+        if str1 == str2:
+            return str1
+
+        if str1 + str2 != str2 + str1:
+            return ""
+
         len1 = len(str1)
         len2 = len(str2)
 
-        divisor = len1
-        possible = str1
+        divisor = len1 // 2 if len1 > len2 else len2 // 2
 
-        while (possible != ""):
+        while (divisor > 0):
             if len1 % divisor == 0 and len2 % divisor == 0:
-                div1 = len1 // divisor
-                div2 = len2 // divisor
-                if possible * div1 == str1 and possible * div2 == str2:
-                    return possible
-            possible = possible[:-1]
+                if str1[:divisor] == str2[:divisor]:
+                    return str1[:divisor]
             divisor -= 1
-        return possible
+        return ""
