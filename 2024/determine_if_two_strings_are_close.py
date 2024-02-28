@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import Counter
 
 
 class Solution:
@@ -12,12 +12,13 @@ class Solution:
         if (set(word1) != set(word2)):
             return False
 
-        char_dict1 = defaultdict(int)
-        char_dict2 = defaultdict(int)
-
-        for i in range(len1):
-            char_dict1[word1[i]] += 1
-            char_dict2[word2[i]] += 1
+        char_dict1 = Counter(word1)
+        char_dict2 = Counter(word2)
 
         if (char_dict1.keys() != char_dict2.keys()):
             return False
+
+        if (sorted(char_dict1.values()) != sorted(char_dict2.values())):
+            return False
+
+        return True
