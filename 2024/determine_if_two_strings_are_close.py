@@ -15,9 +15,6 @@ class Solution:
         char_dict1 = Counter(word1)
         char_dict2 = Counter(word2)
 
-        if (char_dict1.keys() != char_dict2.keys()):
-            return False
-
         if (sorted(char_dict1.values()) != sorted(char_dict2.values())):
             return False
 
