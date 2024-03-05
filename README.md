@@ -1,4 +1,4 @@
-# leetcode-python3
+# leetcode-solutions
 
-Solutions to leetcode problems written in python3
+Solutions to leetcode problems written in python and go
 https://leetcode.com/problemset/
