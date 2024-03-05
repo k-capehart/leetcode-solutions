@@ -6,6 +6,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 func deleteMiddle(head *ListNode) *ListNode {
 	if head.Next == nil {
 		return nil
