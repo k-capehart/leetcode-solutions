@@ -2,6 +2,7 @@ package main
 
 import "math"
 
+// https://leetcode.com/problems/cycle-length-queries-in-a-tree
 func cycleLengthQueries(n int, queries [][]int) []int {
 	var answers []int
 	for _, query := range queries {

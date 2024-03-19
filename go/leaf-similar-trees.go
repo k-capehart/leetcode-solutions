@@ -10,6 +10,8 @@ import "reflect"
  *     Right *TreeNode
  * }
  */
+
+// https://leetcode.com/problems/leaf-similar-trees/
 func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
 	return reflect.DeepEqual(buildLeafValSeq(root2), buildLeafValSeq(root1))
 }

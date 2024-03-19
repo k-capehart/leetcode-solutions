@@ -8,6 +8,8 @@ package main
  *     Right *TreeNode
  * }
  */
+
+// https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 func goodNodes(root *TreeNode) int {
 	if root == nil {
 		return 0
