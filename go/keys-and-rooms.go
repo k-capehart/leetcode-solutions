@@ -9,9 +9,8 @@ func canVisitAllRooms(rooms [][]int) bool {
 		return true
 	}
 
-	var keyChain []int
-	keyChain = append(keyChain, 0)
-	var keySet = map[int]bool{0: true}
+	keyChain := []int{0}
+	keySet := map[int]bool{0: true}
 
 	for len(keyChain) > 0 {
 		if len(keySet) == len(rooms) {
